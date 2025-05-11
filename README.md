@@ -2,7 +2,7 @@ HOW TO INSTALL:
 
 1. Native Host (only once):
 - Extract zip to a location of your choice
-- Open "VideoDownloaderHost"
+- Open "native_host"
 - Double-click "install_host.bat"
    
 2. Extension:
@@ -21,5 +21,5 @@ HOW TO INSTALL:
    
 3. Uninstall
 - Close the browser
-- Double-click "uninstall_host.bat" in the VideoDownloaderHost folder
+- Double-click "uninstall_host.bat" in the native_host folder
 - Remove the extension from the browser via chrome://extensions
