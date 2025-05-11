@@ -23,7 +23,6 @@ dist/
 *.tmp
 *.log
 *.warn
-*.html
 *.bak
 
 # --- Chrome Extension ---
