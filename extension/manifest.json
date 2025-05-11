@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Video Downloader",
+    "version": "1.0",
+    "key": "MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCvkKqiHFiCDk663waVK58dsXD/0pMD6/dV3xYAN2SqqZwzWcxJXLBzA/JBt+uycXUfqP0M9XUV5tPXrYG00FSLFzOS7Oq9ZPoOq4+OrT0DogyvNpx3Kx2PmxHdyo6qWwF16HAK9yaJgTC3WmMKmUFCwgnr/3tSsOQZwbJfhiYTpx7zEiGGyDXfD73d7qbuoBmd0ZRYSGNiJ3So6pFoyN/yJwjd+15FCyqYjqOKaTKMDLr7YwDmgbocgTAmmsmQzRmsRVFeD6kcZ4klA0u+QBX6dKyzbm42Rf5m8ye5YVyFbymZ7cMYHDKBtsfz2AV5/xHyMa/aB1oSDotAbD9i7AP/AgMBAAECgf8tQx66rJQk84tYoicQTi63eQeo7KD6YdtiSCFj7OQHG7Mpif0g7MSQ4nOSfdhGKPoJL4gNzzpgayIyeIj4FL23HkQtnObn7SCKp7BbGE6ioSSkB3BPSM5WN6RjidU+FjhKLaK1MQK+cJAetS7TjK9GhsAIF9Wze+dSvJ1AA1XNutnalK8o7PmoLuIsxoMwk4JKdIctxLZCFQ0OSkIalorAU85B3mICTmE0eoTdp2fkHzAfMoPOKGwT57Lokzchg0omuKEkJERt6+Jt4RVh5AOHrlGFL+dCnlX73XRI8Kkl+r0wqVNSl6vfMvyXbXDwk5TRHWgNFsjeawMxNiQ1KNECgYEA9AEfrZQeXrZEUw/XdaIMlujgV7EHS/IWRd8IO6qy4yn+v8jnVGp8Td7BWqcgNw55EvX9R/SITxeoZGY3aDXbNPh+j3mrc5D0xB8+AzzKHxUJQErgcjoJQKfaizKabUpq67hGeXda58T3G/dyARKG5djC7U5suvCs4PIxEgzF8CMCgYEAuDI2LyK41OY9rzwFAuOBSQpqLo7U6MoT3MxwocpRivsWnCXbQKGVHK63FSCsxvPFxhss8x3pBUGjW/1i5l/gvzec8PisUlwru+eoJJT0bYHBWDvtT5VdVo/FdSgoHW7WIhKGQe6mKefq4xnSfxnTPfeztkPdMrAcTrn38Ydn7HUCgYEApndJzFsb6RPCQ0SwgtFec2pG+6yLxNVROrPxYvuO9YnGAcOnhqDrUxjgot8YDFe0ZCosdPWwNP135Z8St+beOSI6/dlNDhfb1R1XalADuPbaC+HJhERx4YligMqyLlOx5EUg12eFPk/TImJLhc3E+HRMcCer6FGgMAsrTRwnwi8CgYADIYdeQb7Wj5tY0TJcnDVkYnLvm6nu0xCHXkpD1caREDeQK+yQKq74L9gY2ddWAmrINUoMT+PYHQeD1sjJlbOiTHW0euWi+MIdjZCEHqwQ+HWq5EniYm2VvRfkJ+yWo32sUphJop7cc37AoX28f1nh4cYCQSEPbYLtq6eVSXHwyQKBgQCHoR2g9Nm0kzQleFwgqO1Qy3fUY/myCQQcAg38o6I+EoHQtnBgAAOAfXPxMziMjFehWhy1fv55g27zQBkQjNpZRBirfwbHZd2hTNdsY+xQgxBASAzoj/F9Dzu/ZLle2heTHhh5gsEzGEjgeh/xyhkXlPpApzV3Ai2NSA3ILGA/HA==",
+    "permissions": ["webRequest", "downloads", "scripting", "activeTab", "nativeMessaging"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.png"
+        }
+    },
+    "content_scripts": [{
+            "matches": ["<all_urls>"],
+			"js": ["content.js"]
+        }
+    ]
+}
